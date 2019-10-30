@@ -10,9 +10,9 @@ def mySelector(objName,additive=False):
     
 
 
-bpy.ops.mesh.primitive_cube_add(radius=1,location=(0,0,0))
+bpy.ops.mesh.primitive_cube_add(size=2,location=(0,0,0))
 
-bpy.ops.mesh.primitive_uv_sphere_add(radius = 1,location=(1,1,1))	
+bpy.ops.mesh.primitive_uv_sphere_add(radius = 2,location=(1,1,1))	
 
 
 #Select only 'Cube'
