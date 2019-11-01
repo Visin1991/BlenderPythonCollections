@@ -60,6 +60,7 @@ class spec:
         
 class create:
     """Function Class for CREATING Objects"""
+    """ Once we create a Object, the Object will be selected automatically """
     
     def cube(objName):
         bpy.ops.mesh.primitive_cube_add(size=0.5, location=(0, 0, 0))
@@ -82,10 +83,14 @@ def delete_all():
         bpy.ops.object.select_all(action='SELECT')
         bpy.ops.object.delete(use_global=False)
         
-        
+     
+"""     with the __main__ defined in this .py script. When we run this script, 
+   the main function of this script will get call. In other words, when we import this script,
+   We will only import functions and classes, not runing the main function"""   
 if __name__ == "__main__":
     # Create a cube
     create.cube('PerfectCube')
+    
     # Differential transformations combine
     sel.translate((0, 1, 2))
     sel.scale((1, 1, 2))
